@@ -39,7 +39,7 @@ const useStyles =makeStyles((theme) => ({
   },
   Image:{
     marginRight:"10px",
-    height:"3rem "
+    height:"3rem ",
   },
 }));
 

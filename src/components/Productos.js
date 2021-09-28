@@ -12,7 +12,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function FullWidthGrid() {
+export default function Productos() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2} marginTop="5rem">

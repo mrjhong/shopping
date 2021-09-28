@@ -10,8 +10,8 @@ function App() {
     <div>
     <Navbar/>
   
-    <Productos/> 
-    {/* <CheckoutPage/>*/}
+  
+    <CheckoutPage/>
   
     </div>
   );
