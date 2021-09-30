@@ -26,15 +26,15 @@ const useStyles = makeStyles((theme) => ({
     height: 0,
     paddingTop: "56.25%",
   },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,}),
+  CardActions: {
+   display:"flex !important",
+   justifyContent:"space-between !important",
+  
   },
-  expandOpen: {
-    transform: "rotate(10deg)",
+  cardRaiting: {
+    display:"flex",
   },
+
 }));
 
 export default function CheckoutCard({ miProducto: { id, name, productType, image, price, raiting, descripcion } }
@@ -64,12 +64,12 @@ export default function CheckoutCard({ miProducto: { id, name, productType, imag
       />
       <CardMedia
         component="img"
-        height="200"
+        height="auto"
         image={image}
         alt="Paella dish"
       />
 
-      <CardActions disableSpacing>
+      <CardActions disableSpacing className={estilos.CardActions}> 
       <div className={estilos.cardRaiting}>
     {Array(raiting)
       .fill()

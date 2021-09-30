@@ -11,7 +11,17 @@ const products=[
         "moto buena ,bonita ,barata pues"
     },
   
-
+    {
+        id:2,
+        name:"colchon",
+        productType: "spring",
+        price: 70,
+        raiting: 4,
+        image:
+        "https://http2.mlstatic.com/D_NQ_NP_667731-MCO31034917733_062019-V.jpg",
+        descripcion:
+        "PC bueno ,bonito ,barato pues"
+    },
     {
         id:3,
         name:"torre",

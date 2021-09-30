@@ -5,6 +5,10 @@ import Grid from '@mui/material/Grid';
 import Producto from './Producto';
 import products from '../dbProductos';
 import CheckoutCard from "./CheckoutCard";
+import Total from "./Total";
+import { useStateValue } from '../StateProvider';
+
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -14,13 +18,15 @@ const useStyles = makeStyles((theme) => ({
 
 const CheckoutPage = () => {
     const estilos = useStyles();
+    const [{ basket }, dispatch] = useStateValue();
 
     function FormRow() {
+ 
         return (
             <React.Fragment>
-                {products.map((miItem) => (
+                {basket?.map((item) => (
                     <Grid item xs={12} sm={8} md={6} lg={4}>
-                        <CheckoutCard key={miItem.id} miProducto={miItem} />
+                        <CheckoutCard key={item.id} miProducto={item} />
                     </Grid>
                 ))}
             </React.Fragment>
@@ -41,7 +47,7 @@ const CheckoutPage = () => {
                 </Grid>
                 <Grid item xs={12} sm={4} md={5}>
                     <Typography aling='center' gutterBottom variant='h4'>
-                        Total
+                        <Total/>
                     </Typography>
                 </Grid>
             </Grid>

@@ -19,8 +19,9 @@ import logo from '../assets/bitmap.png'
 import { Button, Grow, iconClasses } from '@mui/material';
 import { Class, Image, ShoppingCart } from '@mui/icons-material';
 import { ClassNames } from '@emotion/react';
-import { height } from '@mui/system';
+import { color, height } from '@mui/system';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 const useStyles =makeStyles((theme) => ({
   root:{
@@ -41,6 +42,10 @@ const useStyles =makeStyles((theme) => ({
     marginRight:"10px",
     height:"3rem ",
   },
+  IconButton:{
+    backgroundColor:"#ffff ",
+    color:"#ffff !important"
+  }
 }));
 
 const Search = styled('div')(({ theme }) => ({
@@ -186,6 +191,7 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" className={estilos.appBar}>
         <Toolbar>
+        <Link to="/" >
           <IconButton
             size="large"
             edge="start"
@@ -195,6 +201,7 @@ export default function Navbar() {
           >
             <img src={logo} className={estilos.Image}/>
           </IconButton>
+          </Link>
           <Typography
             variant="h6"
             noWrap
@@ -214,11 +221,13 @@ export default function Navbar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="TUS COMPRAS" color="inherit">
+          <Link to="/misCompras"> 
+            <IconButton size="large" aria-label="TUS COMPRAS"  className={estilos.IconButton}>
               <Badge badgeContent={4} color="error">
                 <ShoppingCart />
               </Badge>
             </IconButton>
+            </Link>
             <IconButton
               size="large"
               aria-label="show 17 new notifications"

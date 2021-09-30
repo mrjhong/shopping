@@ -11,6 +11,9 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { AddShoppingCart } from '@mui/icons-material';
 import accounting from "accounting";
+import { actionTypes } from '../reducer';
+import { useStateValue } from '../StateProvider';
+
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -22,25 +25,40 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function Producto({miProducto :{id,name,productType,image,price,raiting,descripcion}}
-  ) {
+export default function Producto({ miProducto: { id, name, productType, image, price, raiting, descripcion },
+}) {
+  const [{ basket }, dispatch] = useStateValue();
   const [expanded, setExpanded] = React.useState(false);
-
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+  const addToBasket = () => {
+    dispatch({
+      type: actionTypes.ADD_TO_BASKET,
+      item: {
+        id,
+        name,
+        productType,
+        image,
+        price,
+        raiting,
+        descripcion,
+      }
+    })
+  };
 
   return (
-    <Card sx={{ 
+    <Card sx={{
 
-      marginLeft:5,
-      marginTop:5,
-      maxWidth: 325 }}>
+      marginLeft: 5,
+      marginTop: 5,
+      maxWidth: 325
+    }}>
       <CardHeader
-      
+
         action={
           <IconButton aria-label="settings">
-          {accounting.formatMoney(price)};
+            {accounting.formatMoney(price)};
           </IconButton>
         }
         title={name}
@@ -48,7 +66,7 @@ export default function Producto({miProducto :{id,name,productType,image,price,r
       />
       <CardMedia
         component="img"
-        height="200"
+        height="auto"
         image={image}
         alt="Paella dish"
       />
@@ -58,14 +76,14 @@ export default function Producto({miProducto :{id,name,productType,image,price,r
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to cart">
+        <IconButton aria-label="add to cart" onClick={addToBasket}>
           <AddShoppingCart />
         </IconButton>
-       
+
         <IconButton>
-           {Array(raiting)
-           .fill()
-           .map((_, i)=>(<p>&#11088;</p>))} 
+          {Array(raiting)
+            .fill()
+            .map((_, i) => (<p>&#11088;</p>))}
 
         </IconButton>
         <ExpandMore
@@ -80,16 +98,16 @@ export default function Producto({miProducto :{id,name,productType,image,price,r
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>
-           descripcion del producto
-           nombre
-           calidad 
-           año
+            descripcion del producto
+            nombre
+            calidad
+            año
           </Typography>
           <Typography paragraph>
             ejemplo de producto
           </Typography>
           <Typography paragraph>
-          {descripcion}
+            {descripcion}
           </Typography>
           <Typography>
             Set aside off of the heat to let rest for 10 minutes, and then serve.
