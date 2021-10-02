@@ -57,8 +57,8 @@ export default function Producto({ miProducto: { id, name, productType, image, p
       <CardHeader
 
         action={
-          <IconButton aria-label="settings">
-            {accounting.formatMoney(price)};
+          <IconButton aria-label="price">
+            {accounting.formatMoney(price)}
           </IconButton>
         }
         title={name}

@@ -14,6 +14,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import accounting from "accounting";
 import Delete from '@mui/icons-material/Delete';
+import { useStateValue } from '../StateProvider';
+import { actionTypes } from '../reducer';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,11 +42,18 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CheckoutCard({ miProducto: { id, name, productType, image, price, raiting, descripcion } }
 ) {
+  
+  const [{ basket }, dispatch] = useStateValue();
+
   const [expanded, setExpanded] = React.useState(false);
   const estilos=useStyles(); 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+  const eliminarItem= () => dispatch({
+    type:actionTypes.ELIMINAR_ITEM,
+    id
+  })
 
   return (
     <Card sx={{
@@ -55,8 +65,8 @@ export default function CheckoutCard({ miProducto: { id, name, productType, imag
       <CardHeader
 
         action={
-          <IconButton aria-label="settings">
-            {accounting.formatMoney(price)};
+          <IconButton aria-label="price">
+            {accounting.formatMoney(price)}
           </IconButton>
         }
         title={name}
@@ -75,7 +85,7 @@ export default function CheckoutCard({ miProducto: { id, name, productType, imag
       .fill()
       .map((_, i) => (<p>&#11088; </p>))}
       </div>
-      <IconButton>
+      <IconButton onClick={eliminarItem}>
       <DeleteIcon/>
       </IconButton>
       </CardActions>

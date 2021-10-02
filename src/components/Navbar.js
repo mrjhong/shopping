@@ -22,6 +22,8 @@ import { ClassNames } from '@emotion/react';
 import { color, height } from '@mui/system';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
+import { useStateValue } from '../StateProvider';
+
 
 const useStyles =makeStyles((theme) => ({
   root:{
@@ -95,6 +97,8 @@ export default function Navbar() {
   const estilos=useStyles();
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const [{ basket }, dispatch] = useStateValue();
+
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -154,7 +158,7 @@ export default function Navbar() {
     >
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
+          <Badge badgeContent={basket?.length} color="error">
             <ShoppingCart />
           </Badge>
         </IconButton>
@@ -223,7 +227,7 @@ export default function Navbar() {
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
           <Link to="/misCompras"> 
             <IconButton size="large" aria-label="TUS COMPRAS"  className={estilos.IconButton}>
-              <Badge badgeContent={4} color="error">
+              <Badge badgeContent={basket?.length} color="error">
                 <ShoppingCart />
               </Badge>
             </IconButton>
