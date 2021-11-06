@@ -6,7 +6,7 @@ const products=[
         price: 30,
         raiting: 4,
         image:
-        "https://www.planetamotos.com.co/wp-content/uploads/2021/05/tvs-apache-rtr-200-comprar-200x200.jpg",
+        "https://cuponassets.cuponatic-latam.com/backendPe/uploads/imagenes_descuentos/93005/7c93b64e9993c97d4f29b8ae64643b28a463fc74.S.jpg",
         descripcion:
         "moto buena ,bonita ,barata pues"
     },
@@ -18,7 +18,7 @@ const products=[
         price: 70,
         raiting: 4,
         image:
-        "https://http2.mlstatic.com/D_NQ_NP_667731-MCO31034917733_062019-V.jpg",
+        "https://heraldodemexico.com.mx/u/fotografias/m/2021/1/6/f1280x720-302105_433780_5050.jpg",
         descripcion:
         "PC bueno ,bonito ,barato pues"
     },
@@ -29,7 +29,7 @@ const products=[
         price: 70,
         raiting: 4,
         image:
-        "https://www.pcware.com.co/wp-content/uploads/elementor/thumbs/pc-gamer-oy4wu1lhsv5of1vgug7w8e6vnavrnyot0krzi5xyhc.jpg",       
+        "https://www.ilove786tv.com/wp-content/uploads/2021/02/maxresdefault.jpg",
         descripcion:
         "PC bueno ,bonito ,barato pues"
     }
@@ -41,7 +41,7 @@ const products=[
         price: 50,
         raiting: 4,
         image:
-        "https://www.cycelectronica.com/media/wsf-18saweb0001410145493-200x200.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyGy-wODpvrU4ruOEgexrLMPiMxkNOZYBrNA&usqp=CAU",
         descripcion:
         "woofer bueno ,bonito ,barato pues"
     }
