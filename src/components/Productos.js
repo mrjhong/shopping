@@ -12,13 +12,20 @@ const item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+
 export default function Productos() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    
+    <Box sx={{ flexGrow: 1 }} marginTop="5rem">
+      
+     
+      
+      
       <Grid container spacing={2} marginTop="5rem">
+     
       {
         products.map (miProducto=>(
-        <Grid item xs={8} sm={6} md={4} lg={3}>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
           <Producto key={Producto.id} miProducto={miProducto}/>
         </Grid>
       ))

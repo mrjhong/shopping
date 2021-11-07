@@ -6,7 +6,7 @@ import RegisterPage from './components/RegisterPage';
 import Navbar from './components/Navbar';
 import Productos from './components/Productos';
 import CheckoutPage from './components/CheckoutPage';
-
+import Inicio from './components/Inicio';
 import Dashboard from './deshboard/Dashboard';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/Tema';
@@ -34,8 +34,12 @@ function App() {
               <CheckoutPage />
             </Route>
 
-            <Route path="/">
+            <Route path="/Productos">
               <Productos />
+            </Route>
+
+            <Route path="/">
+              <Inicio />
             </Route>
             
           </Switch>

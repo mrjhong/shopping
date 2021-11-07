@@ -2,8 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import Grid from '@mui/material/Grid';
-import Producto from './Producto';
-import products from '../dbProductos';
+
 import CheckoutCard from "./CheckoutCard";
 import Total from "./Total";
 import { useStateValue } from '../StateProvider';
