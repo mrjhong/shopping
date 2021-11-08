@@ -81,10 +81,10 @@ export default function Inicio() {
       </Box>
       
       <TabPanel value={value} index={0}>
-        <Productos />
+        <Productos/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <CheckoutPage />
+        <CheckoutPage/>
       </TabPanel>
 
     </Box>

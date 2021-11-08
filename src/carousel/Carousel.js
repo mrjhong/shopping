@@ -10,7 +10,7 @@ import { Button, makeStyles } from '@material-ui/core'
 const Slideshow = ({
 		children,
 		controles = false,
-		autoplay = true,
+		autoplay = false,
 		velocidad="500",
 		intervalo="5000"
 	}) => {
@@ -19,10 +19,9 @@ const Slideshow = ({
 
 	const siguiente = useCallback(() => {
 		// Comprobamos que el slideshow tenga elementos
-		if(slideshow.current.children.length > 0){
-			console.log('Siguiente')
+		if(slideshow.current && (slideshow.current.children.length > 0)){
+			
 
-			// Obtenemos el primer elemento del slideshow.
 			const primerElemento = slideshow.current.children[0];
 
 			// Establecemos la transicion para el slideshow.

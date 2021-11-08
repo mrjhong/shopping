@@ -1,4 +1,5 @@
 import * as React from 'react';
+import theme from './Tema';
 import { styled, alpha,} from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,7 +16,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import logo from '../assets/bitmap.png'
+import logo from '../assets/Logo2.png'
 import { Button, Grow, iconClasses } from '@mui/material';
 import { Class, Image, ShoppingCart } from '@mui/icons-material';
 import { ClassNames } from '@emotion/react';
@@ -23,6 +24,7 @@ import { color, height } from '@mui/system';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
+import   grey  from '@mui/material/colors';
 
 
 const useStyles =makeStyles((theme) => ({
@@ -31,7 +33,7 @@ const useStyles =makeStyles((theme) => ({
     marginBottom:"7rem",
   },
   appBar:{
-    backgroundColor:"",
+    backgroundColor:"grey !important",
     marginBottom:""
   },
   Grow:{
@@ -42,7 +44,8 @@ const useStyles =makeStyles((theme) => ({
   },
   Image:{
     marginRight:"10px",
-    height:"3rem ",
+    height:"4rem ",
+    width:"4rem"
   },
   IconButton:{
     backgroundColor:"#ffff ",
@@ -108,53 +111,51 @@ export default function Navbar() {
     setMobileMoreAnchorEl(null);
   };
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
-  };
+
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
   const menuId = 'primary-search-account-menu';
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
+
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
     <Menu
       anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
+     
       id={mobileMenuId}
       keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
+    
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
+      PaperProps={{
+        elevation: 0,
+        sx: {
+          overflow: "visible",
+          filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+          mt: 2.5,
+          "& .MuiAvatar-root": {
+            width: 32,
+            height: 32,
+            ml: -0.5,
+            mr: 1
+          },
+          "&:before": {
+            content: '""',
+            display: "block",
+            position: "absolute",
+            top: 0,
+            right: 14,
+            width: 10,
+            height: 10,
+            bgcolor: "background.paper",
+            transform: "translateY(-50%) rotate(45deg)",
+            zIndex: 0
+          }
+        }
+      }}
     >
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
@@ -241,17 +242,17 @@ export default function Navbar() {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
+            <Link to="/login" >
             <IconButton
               size="large"
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
+              className={estilos.IconButton}
             >
               <AccountCircle />
             </IconButton>
+            </Link>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -268,7 +269,6 @@ export default function Navbar() {
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
-      {renderMenu}
     </Box>
   );
 }
