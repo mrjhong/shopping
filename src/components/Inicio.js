@@ -5,14 +5,14 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Productos from './Productos';
-import CheckoutPage from './CheckoutPage';
+import Servicios from './Servicios';
 import Grid from '@mui/material/Grid';
 import SlideProduct from '../carousel/SlideProduct';
 
 
 const styles = {
   paperContainer: {
-    background:'#FBE8D1'
+    background:''
     }
   };
 function TabPanel(props) {
@@ -84,7 +84,7 @@ export default function Inicio() {
         <Productos/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <CheckoutPage/>
+        <Servicios/>
       </TabPanel>
 
     </Box>

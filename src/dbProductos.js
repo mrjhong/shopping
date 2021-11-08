@@ -44,6 +44,40 @@ const products=[
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyGy-wODpvrU4ruOEgexrLMPiMxkNOZYBrNA&usqp=CAU",
         descripcion:
         "woofer bueno ,bonito ,barato pues"
+    },
+
+    {
+        id:5,
+        name:"colchon",
+        productType: "spring",
+        price: 70,
+        raiting: 4,
+        image:
+        "https://heraldodemexico.com.mx/u/fotografias/m/2021/1/6/f1280x720-302105_433780_5050.jpg",
+        descripcion:
+        "PC bueno ,bonito ,barato pues"
+    },
+    {
+        id:6,
+        name:"colchon",
+        productType: "spring",
+        price: 70,
+        raiting: 4,
+        image:
+        "https://heraldodemexico.com.mx/u/fotografias/m/2021/1/6/f1280x720-302105_433780_5050.jpg",
+        descripcion:
+        "PC bueno ,bonito ,barato pues"
+    },
+    {
+        id:7,
+        name:"colchon",
+        productType: "spring",
+        price: 70,
+        raiting: 4,
+        image:
+        "https://heraldodemexico.com.mx/u/fotografias/m/2021/1/6/f1280x720-302105_433780_5050.jpg",
+        descripcion:
+        "PC bueno ,bonito ,barato pues"
     }
 
 ];
