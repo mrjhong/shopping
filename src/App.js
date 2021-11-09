@@ -1,7 +1,7 @@
 import './App.css';
 import * as React from 'react';
+import Login from './components/login/Login3';
 
-import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import Navbar from './components/Navbar';
 import Productos from './components/Productos';
@@ -25,7 +25,7 @@ function App() {
               <Dashboard/>
             </Route>
             <Route path="/login">
-              <LoginPage/>
+              <Login/>
             </Route>
             <Route path="/Register">
               <RegisterPage/>

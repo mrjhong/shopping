@@ -9,7 +9,7 @@ const SlideProduct= () => {
         <Slideshow controles={true} autoplay={true} velocidad="250">       
                 <Slide>
 					<a href="#">
-						<img src="https://thumbs.dreamstime.com/b/logo-vector-para-barbershop-logotipo-vectorial-tablero-de-anuncios-decorativo-negro-con-accesorios-belleza-profesional-dorados-196793998.jpg"alt=""/>
+						<img src="https://wpdirecto.com/wp-content/uploads/2016/09/barber-pro.jpg"alt=""/>
 					</a>
 					<TextoSlide>
 						<p>15% descuento en productos Apple</p>
@@ -17,7 +17,7 @@ const SlideProduct= () => {
 				</Slide>
 				<Slide>
 					<a href="#">
-						<img src="https://previews.123rf.com/images/soifer/soifer1803/soifer180300063/97160132-barber-shop-logo-letrero-de-ne%C3%B3n-elementos-de-dise%C3%B1o-del-logo-se-puede-usar-como-encabezado-o-planti.jpg"alt=""/>
+						<img src="https://scontent.fbog9-1.fna.fbcdn.net/v/t1.6435-9/30740408_2010886672272661_7865036192239058944_n.png?_nc_cat=111&ccb=1-5&_nc_sid=6e5ad9&_nc_ohc=ZosnxjfjoF0AX9zJybo&_nc_ht=scontent.fbog9-1.fna&oh=1c71a75e031b76f78a20554c3f1a4399&oe=61AE85A7"alt=""/>
 					</a>
 					<TextoSlide>
 						<p>15% descuento en productos Apple</p>
@@ -25,7 +25,7 @@ const SlideProduct= () => {
 				</Slide>
 				<Slide>
 					<a href="#">
-						<img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/barber-shop-design-template-a5839e60d342e6dafe51cf9a413870ee_screen.jpg?ts=1593963607"alt=""/>
+						<img src="http://thebarberferhat.at/bild1.jpg"alt=""/>
 					</a>
 					<TextoSlide>
 						<p>15% descuento en productos Apple</p>
@@ -33,7 +33,7 @@ const SlideProduct= () => {
 				</Slide>
 				<Slide>
 					<a href="#">
-						<img src="https://lh3.googleusercontent.com/proxy/q89FcDHnZ3CWzx2F1PWQC-OSONU_BzkiWNQ8B4A3lc6x8aieYUMzC6BgW8R040hOlVPTVEJxaaTDh2wAN5UoFKGWSfhr2UT-yUuKLod-"alt=""/>
+						<img src="https://www.wallpaperuse.com/wallp/27-276981_m.jpg"alt=""/>
 					</a>
 					<TextoSlide>
 						<p>15% descuento en productos Apple</p>

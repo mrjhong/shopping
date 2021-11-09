@@ -16,12 +16,12 @@ const item = styled(Paper)(({ theme }) => ({
 export default function Productos() {
   return (
     
-    <Box sx={{ flexGrow: 1 }} marginTop="5rem">
+    <Box sx={{ flexGrow: 1 }}>
       
      
       
       
-      <Grid container spacing={2} marginTop="5rem">
+      <Grid container spacing={1} >
      
       {
         products.map (miProducto=>(
