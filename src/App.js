@@ -11,6 +11,9 @@ import Dashboard from './deshboard/Dashboard';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/Tema';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
+import Perfil from './components/Perfil';
+
+
 
 function App() {
   return (
@@ -40,9 +43,15 @@ function App() {
               <Productos />
             </Route>
 
+            <Route path="/Perfil">
+              <Perfil />
+            </Route>
+
             <Route path="/">
               <Inicio />
             </Route>
+
+            
             
           </Switch>
           

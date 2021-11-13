@@ -1,0 +1,52 @@
+
+.contenedor{
+    margin-top: 100px;
+    /* color: red; */
+}
+.fondo{
+    background-color: gray;
+    height: 400px;
+    width: 100%;
+
+}
+.conteImagen{
+    /* colocar la clase conteImagen en el centro y darle avatar */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+.contenido{
+    margin: 50px;
+    background-color: turquoise;
+    height: 1000px;
+    margin-top: -130px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 20px;
+
+}
+.conttitle{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-top: 100px;
+
+}
+.contParrafo{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+
+}
+
