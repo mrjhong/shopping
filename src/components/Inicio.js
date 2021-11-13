@@ -7,7 +7,15 @@ import Box from '@mui/material/Box';
 import Productos from './Productos';
 import Servicios from './Servicios';
 import Grid from '@mui/material/Grid';
-import SlideProduct from '../carousel/SlideProduct';
+// import SlideProduct from '../carousel/SlideProduct';  
+
+import Portafolio from '../carousel/Portafolio';
+
+
+
+
+
+
 
 
 const styles = {
@@ -15,6 +23,8 @@ const styles = {
     background:''
     }
   };
+
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -59,8 +69,16 @@ export default function Inicio() {
   return (
     <Box sx={{ width: '100%' }} marginTop="5rem"  style={styles.paperContainer}>
       <Grid>
-        <SlideProduct />
+        
+        {/* <SlideProduct /> */}
+        
+        <Portafolio />
+            
+        
+        
+        
       </Grid>
+      
       
         
       <Box>
@@ -81,11 +99,14 @@ export default function Inicio() {
       </Box>
       
       <TabPanel value={value} index={0}>
-        <Productos/>
+       <Productos />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Servicios/>
+        <Servicios />
+                
       </TabPanel>
+
+      <Portafolio />
 
     </Box>
   );

@@ -18,6 +18,8 @@ function App() {
       <Router>
         <div>
           <Navbar />
+          
+          
 
           <Switch>
 
@@ -45,6 +47,9 @@ function App() {
           </Switch>
           
         </div>
+
+        
+        
       </Router>
     </ThemeProvider>
 

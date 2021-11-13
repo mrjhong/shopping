@@ -24,7 +24,10 @@ import { color, height } from '@mui/system';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
-import   grey  from '@mui/material/colors';
+import grey from '@mui/material/colors';
+import portafolio from '../carousel/Portafolio';
+
+
 
 
 const useStyles =makeStyles((theme) => ({
@@ -166,7 +169,7 @@ export default function Navbar() {
         <p>COMPRAS</p>
       </MenuItem>
       <MenuItem>
-        <IconButton
+        <IconButton 
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
@@ -207,6 +210,7 @@ export default function Navbar() {
             <img src={logo} className={estilos.Image}/>
           </IconButton>
           </Link>
+          
           <Typography
             variant="h6"
             noWrap
@@ -215,6 +219,7 @@ export default function Navbar() {
           >
             TIENDA
           </Typography>
+          
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
