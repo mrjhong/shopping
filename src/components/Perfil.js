@@ -17,10 +17,10 @@ const Perfil = () => {
         </div>
 
         <h1 className="conttitle">Maritza Larrota</h1>
-        <h5 className="conttitlee">profesión: Barbero</h5>
+        <h5 className="conttitlee">Barbero de Profesión aproximadamente 3 años</h5>
 
         <div className="redesPer">
-          {/* colocar una direcion con un icono de facebook en react */}
+          {/* colocar una direcion con un icono de whatpsapp en react */}
           <Link
             to="https://www.facebook.com/maritza.larrota.9"
             className="editarRedes"
@@ -37,21 +37,18 @@ const Perfil = () => {
           <Link to="/perfil/editar" className="editarRedes">
             <i class="bi bi-twitter"></i>
           </Link>
+          {/* colocar una direcion con un icono de whatpsapp en react */}
+          <Link to="/perfil/editar" className="editarRedes">
+            <i class="bi bi-whatsapp"></i>
+          </Link>
         </div>
         <div className="cinteneparra">
-          <p className="contParrafo">
-            Como peluquero, deberá poseer las características siguientes: Ser
-                      amable y educado. Tener facilidad para hablar con los clientes.
-                      <span className="contParrafo2">
-            Trabajar rápido y con precisión con las manos. Tener sentido
-            artístico y creativo. Tener vista para el color y la forma.
-            Mantenerse al día de las nuevas tendencias, productos, técnicas y
-            métodos de la peluquería. Mostrar un aspecto limpio, ordenado y
-            cuidado. Estar en forma y preparado para estar de pie durante largos
-            ratos.
+                  <p className="contParrafo">
+                      <h2 className="sobre">Sobre mí</h2>
+          Maritza, un artista de considerable rango, el nombre adoptado por Nick Murphy, criado en Melbourne y  <span className="contParrafo2">residente en Brooklyn, escribe,  interpreta y graba toda su propia música, dándole una sensación cálida e íntima con una sólida estructura de ritmo. Un artista de considerable alcance.
             </span>
           </p>
-
+          {/* */}
           {/* <span className="DatosPerso">Edad: 15 Años</span> <span className="DatosPerso">Sexo: Masculino</span> <span className="DatosPerso"> Ciudad: Medellin </span> <span className="DatosPerso"> Pais: Colombia</span> <span className="DatosPerso"> Telefono: 3123456789</span> <span className="DatosPerso"> Correo: yego0210@gmail.com </span> <span className="DatosPerso"> Web: www.yego.com</span>   */}
         </div>
         <h1 className="tituloPortafolio">Mi portafolio:</h1>
@@ -88,7 +85,8 @@ const Perfil = () => {
             />
             <p className="tituloPortafolio2">Lorem ipsum dolor sit amet</p>
           </div>
-          {/* portafolio 4 */}
+                  {/* portafolio 4 */}
+                  
         </div>
       </div>
     </div>

@@ -1,7 +1,11 @@
-/* *{
-    margin: 0;
-    padding: 0;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Righteous&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+}
+
+
 
 .contenedor {
     margin-top: 80px;
@@ -15,8 +19,13 @@
     box-shadow: 0 0 10px rgba(11, 1, 97, 0.5);
     /* border: 5px solid blue; */
     width: 100vw;
-
-
+    /* colocar imagen de fondo y que no se repita en toda la pagina y ajustar la imagen */
+    background-image: url('https://st2.depositphotos.com/2931363/9695/i/600/depositphotos_96952024-stock-photo-young-handsome-man-in-barbershop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: cente
 }
 
 .conteImagen {
@@ -31,6 +40,7 @@
     /* border: royalblue solid 5px; */
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    filter: grayscale(100%) contrast(120%);
 
 }
 
@@ -39,20 +49,21 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     /* efecto con reflejo */
     -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(255, 255, 255, .2)));
-    filter: grayscale(100%) contrast(120%);
+
 
 }
 
 .contenido {
     margin: 50px;
-    background-color: #fff;
+    background-color: #F7F7F7;
     height: 1300px;
     margin-top: -100px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     /* box-shadow: 0 0 10px rgba(32, 9, 238, 0.5); */
     text-align: center;
     padding: 20px;
+    
 }
 
 .conttitle {
@@ -60,6 +71,7 @@
     font-weight: bold;
     color: black;
     margin-top: 100px;
+    font-family: 'Bree Serif', serif;
 
 }
 
@@ -100,6 +112,7 @@
     font-size: 20px;
     font-weight: bold;
     color: black;
+    font-family: 'Bree Serif', serif;
     /* margin-top: 100px; */
 
 }
@@ -130,7 +143,13 @@
 }
 
 .tituloPortafolio {
-    margin-top: 250px;
+    margin-top: 300px;
+    font-family: 'Bree Serif', serif;
+}
+
+.sobre {
+    font-family: 'Bree Serif', serif;
+
 }
 
 .imagenPortafolio {
@@ -164,17 +183,23 @@
 
 
 }
+
 @media (max-width: 1000px) {
-    .contParrafo2{
+    .contParrafo2 {
         display: none;
 
     }
- }
- @media (max-width: 750px) {
-    .portafolio{
+}
+
+@media (max-width: 750px) {
+    .portafolio {
         margin-top: 100px;
     }
-    .tituloPortafolio{
-        margin-top: 320px;
+
+    .tituloPortafolio {
+        margin-top: 400px;
     }
- }
+    .contenido{
+        height: 1500px;
+    }
+}
