@@ -106,7 +106,7 @@ export default function Inicio() {
                 
       </TabPanel>
 
-      <Portafolio />
+     
 
     </Box>
   );
