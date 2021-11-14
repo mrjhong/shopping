@@ -15,7 +15,7 @@
     box-shadow: 0 0 10px rgba(11, 1, 97, 0.5);
     /* border: 5px solid blue; */
     width: 100vw;
-    
+
 
 }
 
@@ -28,9 +28,18 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: royalblue solid 5px;
+    /* border: royalblue solid 5px; */
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.conteImagen:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    /* efecto con reflejo */
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(255, 255, 255, .2)));
+    filter: grayscale(100%) contrast(120%);
 
 }
 
@@ -40,7 +49,8 @@
     height: 1300px;
     margin-top: -100px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(32, 9, 238, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 0 10px rgba(32, 9, 238, 0.5); */
     text-align: center;
     padding: 20px;
 }
@@ -109,28 +119,62 @@
 }
 
 .portafolio {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 20px;
-
-
     margin-top: 100px;
     margin-bottom: 20px;
     font-size: 20px;
     color: gray;
-    /* width: 50%; */
-    /* margin-right: 30px; */
-
-
 
 }
-.tituloPortafolio{
+
+.tituloPortafolio {
     margin-top: 250px;
 }
-.imagenPortafolio{
+
+.imagenPortafolio {
     width: 20vw;
     height: 20vw;
-    border-radius: 20px;
+    border-radius: 30px;
+    transition: all .5s;
+    /* transform: translate(-50%, -50%); */
+    display: block;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(120%);
+    box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, .2);
+    display: block;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+
+
+    ;
 }
+
+.imagenPortafolio:hover {
+    transform: scale(1.1);
+    transition: all .5s;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom,
+            from(transparent), color-stop(.7, transparent),
+            to(rgba(255, 255, 255, .2)));
+
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .1);
+
+
+
+
+}
+@media (max-width: 1000px) {
+    .contParrafo2{
+        display: none;
+
+    }
+ }
+ @media (max-width: 750px) {
+    .portafolio{
+        margin-top: 100px;
+    }
+    .tituloPortafolio{
+        margin-top: 320px;
+    }
+ }
