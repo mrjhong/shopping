@@ -1,0 +1,59 @@
+.formularioreservas {}
+
+.arriba {
+    background-color: #ee4d3f;
+    height: 300px;
+    width: 100%;
+}
+
+.avatarreserva {
+    /* width: 100%; */
+    height: 450px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: -100px;
+    background-color:rgb(246, 249, 252);
+    border-radius: 50px;
+}
+.avatarreserva img {
+    /* crear un avatar */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.datos{
+    margin-left: 100px;
+   margin-top: 50px;
+}
+.formulario{
+    height: 800px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 50px;
+    
+    margin-top: 60px;
+    background-color:rgb(246, 249, 252);
+    border-radius: 50px;
+
+}
+.obligatorio{
+    color: red;
+
+}
+
+
+
+.formularioreservas {
+    margin-top: 85px;
+    /* background-color: red */
+}
+
+/* mover la clase pago ala derecha */
+.pago {
+    /* margin-left: 100px; */
+    margin-top: 50px;
+    text-align: end;
+    font-size: 1.5em;
+}

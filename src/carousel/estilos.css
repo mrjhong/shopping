@@ -11,12 +11,14 @@
 body {
 	background: #EDE9E7;
 	font-family: 'Poppins', sans-serif;
+	
 }
 
 main {
+
 	max-height: auto;
 	max-width: auto;
-	margin: 50px auto;
+	/* margin: 50px auto; */
 	overflow: hidden;
 	
 }

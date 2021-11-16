@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-barra {
+    margin-top: 250px !important;
+    height: 20vw;
+    width: 100vw;
+    /* background-color: #F7F7F7; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 1.5rem;
+    background-color: #0056BF;
+    -webkit-box-shadow: 4px 6px 50px 12px rgba(0,0,0,0.78); 
+    box-shadow: 4px 6px 50px 12px rgba(0,0,0,0.78);
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .contenedor-barra {
+
+        height: 50vw;
+        width: 100vw;
+        margin-top: 250px;
+    }
+}
+
+/* separ los tres div primero segundo tercero */

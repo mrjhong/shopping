@@ -12,6 +12,9 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/Tema';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import Perfil from './components/Perfil';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
+import FormularioReservar from './components/FormularioReservar';
 
 
 
@@ -21,6 +24,7 @@ function App() {
       <Router>
         <div>
           <Navbar />
+          {/* <Nav /> */}
           
           
 
@@ -47,6 +51,10 @@ function App() {
               <Perfil />
             </Route>
 
+            <Route path="/FormularioReservas">
+              <FormularioReservar />
+            </Route>
+
             <Route path="/">
               <Inicio />
             </Route>
@@ -54,6 +62,8 @@ function App() {
             
             
           </Switch>
+
+          <Footer/>
           
         </div>
 

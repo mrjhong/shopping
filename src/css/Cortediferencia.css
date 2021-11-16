@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Righteous&display=swap');
+
+
+
+.contenedor-barra-corte {
+    /* margin-top: 0px !important; */
+    /* margin-top: 150px; */
+    height: 20vw;
+    width: 100vw;
+    /* background-color: #F7F7F7; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px 30px; */
+    font-family: 'Bree Serif', serif;
+    background-color: #0056BF;
+    -webkit-box-shadow: 4px 6px 47px 3px rgba(0, 0, 0, 0.78);
+    box-shadow: 4px 6px 47px 3px rgba(0, 0, 0, 0.78);
+    /* estilo de contenedor moderno con efectos de transición de css */
+    background-image: linear-gradient(to right, #0056BF, #0056BF);
+    /* background-image: linear-gradient(to right, #0056BF, #0056BF); */
+    /* background-image: linear-gradient(to right, #0056BF, #0056BF); */
+
+
+
+
+
+
+}
+
+.cortebarbe {
+    width: 20vw;
+    margin-top: 50px;
+}

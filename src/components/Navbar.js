@@ -27,6 +27,8 @@ import { useStateValue } from '../StateProvider';
 import grey from '@mui/material/colors';
 import portafolio from '../carousel/Portafolio';
 
+import '../css/navbar.css'
+
 
 
 
@@ -217,7 +219,9 @@ export default function Navbar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            TIENDA
+            {/* reservar */}
+          <Link to="/FormularioReservas" ><button type="button" className="btn  btnpedirrr">Reservar Barbero</button></Link>
+            {/* <h2>Reservar</h2>  btnpedirrr*/}
           </Typography>
           
           <Search>
@@ -229,6 +233,7 @@ export default function Navbar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+          {/* <Link to="/Perfil" ><button type="button" className="btn  btnpedirrr">Pedir Barbero</button></Link> */}
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
           <Link to="/misCompras"> 
@@ -246,6 +251,7 @@ export default function Navbar() {
               <Badge badgeContent={17} color="error">
                 <NotificationsIcon />
               </Badge>
+              
             </IconButton>
             <Link to="/login" >
             <IconButton
