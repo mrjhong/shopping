@@ -112,6 +112,7 @@ const FormularioReservar = () => {
               </label>
               
               
+              
               <input
                 type="email"
                 className="form-control "

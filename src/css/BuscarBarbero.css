@@ -1,0 +1,60 @@
+
+.BuscarBarbero{
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(246, 249, 252);
+    height: 600px;
+
+}
+.Buscar{
+    margin-top: 100px;
+    /* margin-left: 150px;
+    margin-right: 150px; */
+    /* padding-left: 150px;
+    padding-right: 150px; */
+    margin-bottom: 100px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px #000000;
+}
+.Buscar input{
+    border-radius: 25px;
+    text-align: center;
+    border: solid 3px #0056BF;
+}
+.mas{
+    /* max-width: 540px; */
+    height: 200px;
+    /* width: 50vw; */
+}
+@media (max-width: 780px) {
+    .mas{
+        height: 330px;
+        margin-bottom: 800px;
+        
+
+    }
+
+}
+.mas img{
+    /* hacer un avatar  */
+    /* transform: translate(-50%, -50%); */
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    overflow: hidden; /* para que no se vea el texto */
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* para que no se vea el texto */
+    filter: grayscale(100%) contrast(120%);
+    margin: 20px 20px 20px 20px;  
+}
+.mas img:hover{
+    transform: scale(1.1);
+    transition: all .5s;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom,
+            from(transparent), color-stop(.7, transparent),
+            to(rgba(255, 255, 255, .2)));
+
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .1);
+}

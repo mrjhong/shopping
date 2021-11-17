@@ -15,6 +15,7 @@ import Perfil from './components/Perfil';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 import FormularioReservar from './components/FormularioReservar';
+import BuscarBarbero from './components/BuscarBarbero';
 
 
 
@@ -53,6 +54,10 @@ function App() {
 
             <Route path="/FormularioReservas">
               <FormularioReservar />
+            </Route>
+
+            <Route path="/BuscarBarbero">
+              <BuscarBarbero />
             </Route>
 
             <Route path="/">
