@@ -2,7 +2,7 @@ import './App.css';
 import * as React from 'react';
 import Login from './components/login/Login3';
 
-import RegisterPage from './components/RegisterPage';
+import Register from './components/Register/Register3';
 import Navbar from './components/Navbar';
 import Productos from './components/Productos';
 import CheckoutPage from './components/CheckoutPage';
@@ -38,7 +38,7 @@ function App() {
               <Login/>
             </Route>
             <Route path="/Register">
-              <RegisterPage/>
+              <Register/>
             </Route>
             <Route path="/misCompras">
               <CheckoutPage />

@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import { Divider, Grid, Stack, Typography, useMediaQuery } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 // project imports
 import AuthWrapper1 from '../login/AuthWrapper1';
@@ -18,7 +21,34 @@ import AuthRegister from './AuthRegister'
 
 const Register = () => {
     const theme = useTheme();
+    const useStyles =makeStyles((theme) => ({
+        root:{
+          flexGrow: 1,
+          marginBottom:"7rem",
+        },
+        appBar:{
+          backgroundColor:"grey !important",
+          marginBottom:""
+        },
+        Grow:{
+          flexGrow:1,
+        },
+        Button:{
+          marginLeft: theme.spacing(2),
+        },
+        Image:{
+          marginRight:"10px",
+          height:"4rem ",
+          width:"4rem"
+        },
+        IconButton:{
+          backgroundColor:"#ffff ",
+          color:"#ffff !important"
+        }
+      }));
     const matchDownSM = useMediaQuery(theme.breakpoints.down('md'));
+    const estilos=useStyles();
+
 
     return (
         <AuthWrapper1>
@@ -49,13 +79,6 @@ const Register = () => {
                                         >
                                             <Grid item>
                                                 <Stack alignItems="center" justifyContent="center" spacing={1}>
-                                                    <Typography
-                                                        color={theme.palette.secondary.main}
-                                                        gutterBottom
-                                                        variant={matchDownSM ? 'h3' : 'h2'}
-                                                    >
-                                                        Sign up
-                                                    </Typography>
                                                     <Typography
                                                         variant="caption"
                                                         fontSize="16px"
