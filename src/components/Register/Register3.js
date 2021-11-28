@@ -51,7 +51,7 @@ const Register = () => {
 
 
     return (
-        <AuthWrapper1>
+        <AuthWrapper1 marginTop="5rem">
             <Grid container direction="column" justifyContent="flex-end" sx={{ minHeight: '100vh' }}>
                 <Grid item xs={12}>
                     <Grid container justifyContent="center" alignItems="center" sx={{ minHeight: 'calc(100vh - 68px)' }}>
@@ -100,11 +100,11 @@ const Register = () => {
                                         <Grid item container direction="column" alignItems="center" xs={12}>
                                             <Typography
                                                 component={Link}
-                                                to="/pages/login/login3"
+                                                to="/login"
                                                 variant="subtitle1"
                                                 sx={{ textDecoration: 'none' }}
                                             >
-                                                Already have an account?
+                                                ¿ya tienes una cuenta?
                                             </Typography>
                                         </Grid>
                                     </Grid>
