@@ -1,27 +1,25 @@
-/* eslint-disable jsx-a11y/alt-text */
 import { Link } from 'react-router-dom';
-  // eslint-disable-next-line no-unused-vars
-import Avatar from '@mui/material/Avatar';
-import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@mui/material/IconButton';
-  // eslint-disable-next-line no-unused-vars
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import { Divider, Grid, Stack, Typography, useMediaQuery } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 // project imports
-import AuthWrapper1 from './AuthWrapper1';
-import AuthCardWrapper from './AuthCardWrapper';
-
-import AuthLogin from './AuthLogin';
+import AuthWrapper1 from '../login/AuthWrapper1';
+import AuthCardWrapper from '../login/AuthCardWrapper';
 import logo from '../../assets/Logo2.png'
+
+import AuthRegister from './AuthRegister'
+
+
 // assets
 
-// ================================|| AUTH3 - LOGIN ||================================ //
+// ===============================|| AUTH3 - REGISTER ||=============================== //
 
-const Login = () => {
+const Register = () => {
     const theme = useTheme();
     const useStyles =makeStyles((theme) => ({
         root:{
@@ -51,6 +49,7 @@ const Login = () => {
     const matchDownSM = useMediaQuery(theme.breakpoints.down('md'));
     const estilos=useStyles();
 
+
     return (
         <AuthWrapper1 marginTop="5rem">
             <Grid container direction="column" justifyContent="flex-end" sx={{ minHeight: '100vh' }}>
@@ -59,7 +58,7 @@ const Login = () => {
                         <Grid item sx={{ m: { xs: 1, sm: 3 }, mb: 0 }}>
                             <AuthCardWrapper>
                                 <Grid container spacing={2} alignItems="center" justifyContent="center">
-                                    <Grid item sx={{ mb: 1 }}>
+                                <Grid item sx={{ mb: 1 }}>
                                             <IconButton
                                                 size="large"
                                                 edge="start"
@@ -80,20 +79,19 @@ const Login = () => {
                                         >
                                             <Grid item>
                                                 <Stack alignItems="center" justifyContent="center" spacing={1}>
-
                                                     <Typography
                                                         variant="caption"
                                                         fontSize="16px"
                                                         textAlign={matchDownSM ? 'center' : 'inherit'}
                                                     >
-                                                        Inicia sesion para continuar
+                                                        Enter your credentials to continue
                                                     </Typography>
                                                 </Stack>
                                             </Grid>
                                         </Grid>
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <AuthLogin />
+                                        <AuthRegister />
                                     </Grid>
                                     <Grid item xs={12}>
                                         <Divider />
@@ -102,11 +100,11 @@ const Login = () => {
                                         <Grid item container direction="column" alignItems="center" xs={12}>
                                             <Typography
                                                 component={Link}
-                                                to="/register"
+                                                to="/login"
                                                 variant="subtitle1"
                                                 sx={{ textDecoration: 'none' }}
                                             >
-                                                ¿No Tienes Una Cuenta?
+                                                ¿ya tienes una cuenta?
                                             </Typography>
                                         </Grid>
                                     </Grid>
@@ -115,10 +113,9 @@ const Login = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                
             </Grid>
         </AuthWrapper1>
     );
 };
 
-export default Login;
+export default Register;
