@@ -1,19 +1,19 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
+// import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
+// import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import Typography from '@mui/material/Typography';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { makeStyles } from '@material-ui/core/styles';
 
 import accounting from "accounting";
-import Delete from '@mui/icons-material/Delete';
+// import Delete from '@mui/icons-material/Delete';
 import { useStateValue } from '../StateProvider';
 import { actionTypes } from '../reducer';
 
@@ -43,13 +43,13 @@ const useStyles = makeStyles((theme) => ({
 export default function CheckoutCard({ miProducto: { id, name, productType, image, price, raiting, descripcion } }
 ) {
   
-  const [{ basket }, dispatch] = useStateValue();
+  const [ dispatch] = useStateValue();
 
-  const [expanded, setExpanded] = React.useState(false);
+  // const [expanded, setExpanded] = React.useState(false);
   const estilos=useStyles(); 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  // const handleExpandClick = () => {
+  //   setExpanded(!expanded);
+  // };
   const eliminarItem= () => dispatch({
     type:actionTypes.ELIMINAR_ITEM,
     id

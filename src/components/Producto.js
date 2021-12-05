@@ -1,3 +1,5 @@
+
+/* eslint-disable jsx-a11y/alt-text */
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
@@ -27,6 +29,8 @@ const ExpandMore = styled((props) => {
 
 export default function Producto({ miProducto: { id, name, productType, image, price, raiting, descripcion },
 }) {
+  
+  // eslint-disable-next-line no-unused-vars
   const [{ basket }, dispatch] = useStateValue();
   const [expanded, setExpanded] = React.useState(false);
   const handleExpandClick = () => {
