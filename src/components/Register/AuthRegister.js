@@ -45,6 +45,13 @@ const FirebaseRegister = ({ ...others }) => {
     const [showPassword, setShowPassword] = useState(false);
     const [checked, setChecked] = useState(true);
 
+//campos de registro
+    const [nombre , setNombre]=useState("");
+    const [email , setEmail]=useState("");
+    const [password, setPassword]=useState("");
+
+
+
     const [strength, setStrength] = useState(0);
     const [level, setLevel] = useState();
 
@@ -65,6 +72,11 @@ const FirebaseRegister = ({ ...others }) => {
         setStrength(temp);
         setLevel(strengthColor(temp));
     };
+    const enviarDatos =(e)=>{
+        e.preventDefault();
+        a
+
+    }
 
     useEffect(() => {
         changePassword('');
@@ -154,6 +166,8 @@ const FirebaseRegister = ({ ...others }) => {
                         <Grid container spacing={matchDownSM ? 0 : 2}>
                             <Grid item xs={12} sm={6}>
                                 <TextField
+                                value={nombre}
+                                onChange={e=>setNombre(e.target.value)}
                                     fullWidth
                                     label="First Name"
                                     margin="normal"
@@ -290,6 +304,7 @@ const FirebaseRegister = ({ ...others }) => {
                                     type="submit"
                                     variant="contained"
                                     color="secondary"
+                                    onClick={enviarDatos}
                                 >
                                     Sign up
                                 </Button>
