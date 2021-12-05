@@ -1,3 +1,4 @@
+  // eslint-disable-next-line no-unused-vars
 import * as React from "react";
 import PropTypes from "prop-types";
 // import Tabs from "@mui/material/Tabs";
@@ -48,6 +49,7 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
+  // eslint-disable-next-line no-unused-vars
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -56,8 +58,9 @@ function a11yProps(index) {
 }
 
 export default function Inicio() {
+  // eslint-disable-next-line no-unused-vars
   const [value, setValue] = React.useState(0);
-
+// eslint-disable-next-line no-unused-vars
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };

@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Total=()=> {
     const estilos = useStyles();
+      // eslint-disable-next-line no-unused-vars
     const [{ basket }, dispatch] = useStateValue();
     return (
         <div className={estilos.root}>

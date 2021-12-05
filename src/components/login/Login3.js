@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { Link } from 'react-router-dom';
+  // eslint-disable-next-line no-unused-vars
 import Avatar from '@mui/material/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@mui/material/IconButton';
-
+  // eslint-disable-next-line no-unused-vars
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
 // material-ui

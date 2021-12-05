@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
 import * as React from 'react';
-import theme from './Tema';
+// import theme from './Tema';
 import { styled, alpha,} from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -10,24 +11,25 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
+// import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import logo from '../assets/Logo2.png'
-import { Button, Grow, iconClasses } from '@mui/material';
-import { Class, Image, ShoppingCart } from '@mui/icons-material';
-import { ClassNames } from '@emotion/react';
-import { color, height } from '@mui/system';
+// import { Button, Grow, iconClasses } from '@mui/material';
+// import { Class, Image, ShoppingCart } from '@mui/icons-material';
+// import { ClassNames } from '@emotion/react';
+// import { color, height } from '@mui/system';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
-import grey from '@mui/material/colors';
-import portafolio from '../carousel/Portafolio';
+// import grey from '@mui/material/colors';
+// import portafolio from '../carousel/Portafolio';
 
 import '../css/navbar.css'
+import { ShoppingCart } from '@mui/icons-material';
 
 
 
@@ -102,9 +104,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  const estilos=useStyles();
+  const estilos = useStyles();
+  // eslint-disable-next-line no-unused-vars
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  // eslint-disable-next-line no-unused-vars
   const [{ basket }, dispatch] = useStateValue();
 
 
@@ -165,7 +169,7 @@ export default function Navbar() {
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={basket?.length} color="error">
-            <ShoppingCart />
+            <ShoppingCart/>
           </Badge>
         </IconButton>
         <p>COMPRAS</p>
@@ -209,7 +213,9 @@ export default function Navbar() {
             aria-label="open drawer"
             sx={{ mr: 1 }}
           >
-            <img src={logo} className={estilos.Image}/>
+            
+              <img src={logo} className={estilos.Image} />
+              
           </IconButton>
           </Link>
           
